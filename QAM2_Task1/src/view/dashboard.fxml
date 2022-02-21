@@ -1,15 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.DashboardController"
-            prefHeight="400.0"
-            prefWidth="600.0">
-
+<AnchorPane prefHeight="441.0" prefWidth="1211.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+    <AnchorPane layoutX="29.0" layoutY="62.0" prefHeight="346.0" prefWidth="544.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 5; -fx-background-color: #e0ebeb; -fx-background-insets: 1;">
+        <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="90.0" text="Customers">
+                <font>
+                    <Font name="System Bold" size="14.0" />
+                </font>
+            </Label>
+            <TableView fx:id="AllCustomersTable" editable="true" layoutX="12.0" layoutY="46.0" prefHeight="177.0" prefWidth="526.0">
+                <columns>
+                    <TableColumn fx:id="DashCustomerID" prefWidth="75.0" text="Customer ID">
+<!--                        <cellValueFactory>-->
+<!--                            <PropertyValueFactory property="customerId" />-->
+<!--                        </cellValueFactory>-->
+                    </TableColumn>
+                    <TableColumn fx:id="DashCustomerName" prefWidth="99.0" text="Customer Name">
+<!--                        <cellValueFactory>-->
+<!--                            <PropertyValueFactory property="customerName" />-->
+<!--                        </cellValueFactory>-->
+                    </TableColumn>
+                    <TableColumn fx:id="DashAddress" prefWidth="112.0" text="Address">
+<!--                        <cellValueFactory>-->
+<!--                            <PropertyValueFactory property="address" />-->
+<!--                        </cellValueFactory>-->
+                    </TableColumn>
+                    <TableColumn fx:id="DashPostal" prefWidth="75.0" text="Postal Code">
+<!--                        <cellValueFactory>-->
+<!--                            <PropertyValueFactory property="postal" />-->
+<!--                        </cellValueFactory>-->
+                    </TableColumn>
+                    <TableColumn fx:id="DashPhone" prefWidth="90.0" text="Phone Number">
+<!--                            <cellValueFactory>-->
+<!--                                <PropertyValueFactory property="phone" />-->
+<!--                            </cellValueFactory>-->
+                    </TableColumn>
+                    <TableColumn fx:id="DashDivision" prefWidth="74.0" text="Division">
+<!--                        <cellValueFactory>-->
+<!--                            <PropertyValueFactory property="division" />-->
+<!--                        </cellValueFactory>-->
+                    </TableColumn>
+                </columns>
+            </TableView>
+              <Button fx:id="AddCustomerButton" layoutX="150.0" layoutY="294.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Add New Customer" />
+              <Button fx:id="CustomerInfoButton" layoutX="121.0" layoutY="231.0" mnemonicParsing="false" text="Selected Customer Information" />
+         <Line endX="164.0" layoutX="222.0" layoutY="272.0" startX="-196.0" />
+        </children>
+    </AnchorPane>
+   <Label alignment="TOP_CENTER" layoutX="110.0" layoutY="14.0" prefHeight="36.0" prefWidth="850.0" style="-fx-font-weight: bold; -fx-background-color: #24527a; -fx-border-radius: 5; -fx-border-style: solid; -fx-background-insets: 1;" text="Dashboard" textFill="WHITESMOKE">
+      <font>
+         <Font size="25.0" />
+      </font>
+   </Label>
+   <AnchorPane layoutX="580.0" layoutY="60.0" prefHeight="346.0" prefWidth="420.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 5; -fx-background-color: #e0ebeb; -fx-background-insets: 1;">
+      <children>
+         <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="120.0" text="Appointments">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+         <TableView fx:id="AllCustomersTable1" editable="true" layoutX="12.0" layoutY="46.0" prefHeight="177.0" prefWidth="396.0">
+            <columns>
+               <TableColumn fx:id="MainPartID1" prefWidth="75.0" text="Part ID" />
+               <TableColumn fx:id="MainPartName1" prefWidth="75.0" text="Part Name" />
+               <TableColumn fx:id="MainPartInv1" prefWidth="106.33331298828125" text="Inventory Level" />
+               <TableColumn fx:id="MainPartPrice1" prefWidth="137.33331298828125" text="Price/Cost per Unit" />
+            </columns>
+         </TableView>
+         <Button fx:id="AddCustomerButton1" layoutX="130.0" layoutY="294.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="161.0" text="Add New Appointment" />
+         <Button fx:id="CustomerInfoButton1" layoutX="110.0" layoutY="231.0" mnemonicParsing="false" text="Selected Appointment Information" />
+         <Line endX="164.0" layoutX="222.0" layoutY="272.0" startX="-196.0" />
+         <HBox alignment="TOP_CENTER" layoutX="200.0" layoutY="15.0" prefHeight="25.0" prefWidth="206.0" style="-fx-background-color: #5dacbd; -fx-border-radius: 5;">
+            <children>
+               <RadioButton mnemonicParsing="false" style="-fx-font-weight: bold;" text="All">
+                  <padding>
+                     <Insets right="10.0" top="3.0" />
+                  </padding>
+               </RadioButton>
+               <RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" style="-fx-font-weight: bold;" text="Weekly">
+                  <padding>
+                     <Insets right="10.0" top="3.0" />
+                  </padding>
+               </RadioButton>
+               <RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" style="-fx-font-weight: bold;" text="Monthly">
+                  <padding>
+                     <Insets right="10.0" top="3.0" />
+                  </padding>
+               </RadioButton>
+            </children>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <padding>
+               <Insets left="7.0" />
+            </padding>
+         </HBox>
+      </children>
+   </AnchorPane>
+   <AnchorPane layoutX="1011.0" layoutY="60.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="346.0" prefWidth="167.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 5; -fx-background-color: #e0ebeb; -fx-background-insets: 1;">
+      <children>
+         <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="120.0" text="Reports">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+         <Button fx:id="AddCustomerButton11" layoutX="11.0" layoutY="148.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Contact Schedules" />
+         <Button fx:id="CustomerInfoButton11" layoutX="11.0" layoutY="77.0" mnemonicParsing="false" text="Customer Appointments" />
+         <Line endX="-90.0" layoutX="226.0" layoutY="127.0" startX="-196.0" />
+         <Line endX="-90.0" layoutX="227.0" layoutY="201.0" startX="-196.0" />
+         <Button fx:id="AddCustomerButton111" layoutX="11.0" layoutY="232.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Other" />
+      </children>
+   </AnchorPane>
 </AnchorPane>
