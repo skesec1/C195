@@ -1,7 +1,5 @@
 package model;
 
-import db.JDBC;
-
 //public class Main {
 //
 //    public static void main(String[] args) {
@@ -21,8 +19,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/view/login.fxml"));
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Parent root = FXMLLoader.load(getClass().getResource("/view/main.fxml"));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 

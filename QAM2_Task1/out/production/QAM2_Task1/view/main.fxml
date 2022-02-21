@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
     <children>
       <Pane layoutX="165.0" layoutY="33.0" prefHeight="323.0" prefWidth="266.0">
          <children>
@@ -16,8 +16,8 @@
               </VBox>
               <VBox alignment="BOTTOM_RIGHT" layoutX="87.0" layoutY="127.0" prefHeight="69.0" prefWidth="146.0" spacing="9.0">
                   <children>
-                      <TextField fx:id="UserId" editable="true" prefHeight="25.0" prefWidth="96.0" />
-                      <TextField fx:id="password" editable="true" layoutX="10.0" layoutY="47.0" />
+                      <TextField fx:id="userIdField" editable="true" prefHeight="25.0" prefWidth="96.0" />
+                      <TextField fx:id="passwordField" editable="true" layoutX="10.0" layoutY="47.0" />
                   </children>
               </VBox>
             <Label alignment="CENTER" layoutX="84.0" layoutY="74.0" prefHeight="17.0" prefWidth="95.0" text="LOGIN">
@@ -26,7 +26,7 @@
                </font>
             </Label>
             <Label layoutX="120.0" layoutY="14.0" prefHeight="17.0" prefWidth="132.0" text="User Location Displayed" />
-            <Button layoutX="179.0" layoutY="245.0" mnemonicParsing="false" text="Submit" />
+            <Button fx:id="SubmitLoginBtn" layoutX="179.0" layoutY="245.0" mnemonicParsing="false" onAction="#OnSubmit" text="Submit" />
          </children>
       </Pane>
     </children>
