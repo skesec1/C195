@@ -25,7 +25,7 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="120.0" layoutY="14.0" prefHeight="17.0" prefWidth="132.0" text="User Location Displayed" />
+            <Label layoutX="120.0" layoutY="14.0" prefHeight="17.0" prefWidth="132.0" text="User Location Displayed" underline="true" />
             <Button fx:id="SubmitLoginBtn" layoutX="179.0" layoutY="245.0" mnemonicParsing="false" onAction="#OnSubmit" style="-fx-background-color: #24527a; -fx-font-weight: bold; -fx-border-color: black;" text="Submit" textFill="WHITE">
                <font>
                   <Font size="15.0" />

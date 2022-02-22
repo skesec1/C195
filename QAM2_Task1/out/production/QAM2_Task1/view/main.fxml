@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
     <children>
-      <Pane layoutX="165.0" layoutY="33.0" prefHeight="323.0" prefWidth="266.0">
+      <Pane layoutX="165.0" layoutY="33.0" prefHeight="323.0" prefWidth="266.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 5; -fx-background-color: #a7bcb9;">
          <children>
               <VBox alignment="BOTTOM_CENTER" layoutX="25.0" layoutY="115.0" prefHeight="81.0" prefWidth="62.0" spacing="17.0">
                   <children>
@@ -20,13 +20,16 @@
                       <TextField fx:id="passwordField" editable="true" layoutX="10.0" layoutY="47.0" />
                   </children>
               </VBox>
-            <Label alignment="CENTER" layoutX="84.0" layoutY="74.0" prefHeight="17.0" prefWidth="95.0" text="LOGIN">
+            <Label alignment="CENTER" layoutX="84.0" layoutY="74.0" prefHeight="17.0" prefWidth="95.0" style="-fx-font-weight: bold;" text="LOGIN">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="120.0" layoutY="14.0" prefHeight="17.0" prefWidth="132.0" text="User Location Displayed" />
-            <Button fx:id="SubmitLoginBtn" layoutX="179.0" layoutY="245.0" mnemonicParsing="false" onAction="#OnSubmit" text="Submit" />
+            <Label layoutX="120.0" layoutY="14.0" prefHeight="17.0" prefWidth="132.0" text="User Location Displayed" underline="true" />
+            <Button fx:id="SubmitLoginBtn" layoutX="179.0" layoutY="245.0" mnemonicParsing="false" onAction="#OnSubmit" style="-fx-background-color: #24527a; -fx-font-weight: bold; -fx-border-color: black;" text="Submit" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
          </children>
       </Pane>
     </children>
