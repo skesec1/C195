@@ -7,10 +7,10 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-public class MainController extends SceneController {
+public class LoginController extends SceneController {
 
     @FXML
-    private TextField userIdField;
+    private TextField usernameField;
     @FXML
     private TextField passwordField;
 
@@ -39,20 +39,29 @@ public class MainController extends SceneController {
     }
 
     public boolean validateLogin() {
-        String userId = userIdField.getText();
+        String userId = usernameField.getText();
         String password = passwordField.getText();
 
         //If user id or password is null, not found in db, or does not match exactly
-        if (userId == null){
-            System.out.println("User ID not found");
+        if (userId.isBlank()){
+            System.out.println("Username not found");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Incorrect Login Information");
+            alert.setContentText("Username cannot be blank and is case sensitive.");
+            alert.showAndWait();
+            return false;
         }
-        else if (password == null) {
+        else if (password.isBlank()) {
             System.out.println("Password not found");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Incorrect Login Information");
+            alert.setContentText("Password cannot be blank and is case sensitive.");
+            alert.showAndWait();
+            return false;
         }
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Incorrect Login Information");
-        alert.setContentText("User ID and password cannot be blank and are case sensitive.");
-        alert.showAndWait();
-        return false;
+
+        return true;
     }
+
+    //ZoneId class for time zones
 }
