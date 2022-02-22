@@ -34,33 +34,29 @@ public class LoginController extends SceneController {
 
     public void OnSubmit(ActionEvent actionEvent) throws IOException {
         if (validateLogin()) {
+            System.out.println("Submit button selected");
             changeScene(actionEvent, "/view/dashboard.fxml");
         };
     }
 
     public boolean validateLogin() {
-        String userId = usernameField.getText();
+        String username = usernameField.getText();
         String password = passwordField.getText();
 
         //If user id or password is null, not found in db, or does not match exactly
-        if (userId.isBlank()){
+        if (username.isBlank() && password.isBlank()){
             System.out.println("Username not found");
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Incorrect Login Information");
-            alert.setContentText("Username cannot be blank and is case sensitive.");
+            alert.setContentText("Username and password cannot be blank and are case sensitive.");
             alert.showAndWait();
             return false;
         }
-        else if (password.isBlank()) {
-            System.out.println("Password not found");
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Incorrect Login Information");
-            alert.setContentText("Password cannot be blank and is case sensitive.");
-            alert.showAndWait();
-            return false;
-        }
-
-        return true;
+//        username.contentEquals([username in database]) && password.contentEquals([password in database]) {
+//            System.out.println("Username & password match");
+//            return true;
+//        }
+        return true;  
     }
 
     //ZoneId class for time zones
