@@ -46,4 +46,12 @@ public class DashboardController extends SceneController{
     public void OnCustApp(ActionEvent actionEvent) throws IOException {
         changeScene(actionEvent, "/view/reportCustomerApp.fxml");
     }
+
+    public void OnContactSched(ActionEvent actionEvent) throws IOException {
+        changeScene(actionEvent, "/view/reportContactSched.fxml");
+    }
+
+    public void OnSelect(ActionEvent actionEvent) throws IOException {
+        changeScene(actionEvent, "/view/reportOther.fxml");
+    }
 }

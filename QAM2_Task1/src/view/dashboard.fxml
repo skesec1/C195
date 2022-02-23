@@ -7,7 +7,7 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="687.0" prefWidth="1161.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
-    <AnchorPane layoutX="29.0" layoutY="62.0" prefHeight="249.0" prefWidth="920.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 5; -fx-background-color: #e0ebeb; -fx-background-insets: 1;">
+    <AnchorPane layoutX="29.0" layoutY="62.0" prefHeight="249.0" prefWidth="920.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 5; -fx-background-color: #a7bcb9; -fx-background-insets: 1;">
         <children>
             <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="90.0" text="Customers">
                 <font>
@@ -53,12 +53,12 @@
          <Line endX="-49.0" layoutX="947.0" layoutY="124.0" startX="-227.0" />
         </children>
     </AnchorPane>
-   <Label alignment="TOP_CENTER" layoutX="110.0" layoutY="14.0" prefHeight="36.0" prefWidth="850.0" style="-fx-font-weight: bold; -fx-background-color: #24527a; -fx-border-radius: 5; -fx-border-style: solid; -fx-background-insets: 1;" text="Dashboard" textFill="WHITESMOKE">
+   <Label alignment="TOP_CENTER" layoutX="110.0" layoutY="14.0" prefHeight="36.0" prefWidth="850.0" style="-fx-font-weight: bold; -fx-background-color: #a7bcb9; -fx-border-radius: 5; -fx-border-style: solid; -fx-background-insets: 1;" text="Dashboard" textFill="WHITESMOKE">
       <font>
          <Font size="25.0" />
       </font>
    </Label>
-   <AnchorPane layoutX="29.0" layoutY="324.0" prefHeight="346.0" prefWidth="1101.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 5; -fx-background-color: #e0ebeb; -fx-background-insets: 1;">
+   <AnchorPane layoutX="29.0" layoutY="324.0" prefHeight="346.0" prefWidth="1101.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 5; -fx-background-color: #a7bcb9; -fx-background-insets: 1;">
       <children>
          <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="120.0" text="Appointments">
             <font>
@@ -82,19 +82,22 @@
          <Button fx:id="AddCustomerButton1" layoutX="470.0" layoutY="296.0" mnemonicParsing="false" onAction="#OnAddApp" prefHeight="25.0" prefWidth="161.0" text="Add New Appointment" />
          <Button fx:id="CustomerInfoButton1" layoutX="452.0" layoutY="236.0" mnemonicParsing="false" onAction="#OnSelectedAppBtn" text="Selected Appointment Information" />
          <Line endX="164.0" layoutX="566.0" layoutY="281.0" startX="-196.0" />
-         <HBox alignment="TOP_CENTER" layoutX="151.0" layoutY="15.0" prefHeight="25.0" prefWidth="206.0" style="-fx-background-color: #5dacbd; -fx-border-radius: 5;">
+         <HBox alignment="TOP_CENTER" layoutX="151.0" layoutY="15.0" prefHeight="25.0" prefWidth="206.0">
             <children>
-               <RadioButton fx:id="allAppRadio" mnemonicParsing="false" onAction="#OnAllRadio" style="-fx-font-weight: bold;" text="All">
+               <RadioButton fx:id="allAppRadio" mnemonicParsing="false" onAction="#OnAllRadio" selected="true" style="-fx-font-weight: bold;" text="All">
+                  <padding>
+                     <Insets right="10.0" top="3.0" />
+                  </padding>
+                  <toggleGroup>
+                     <ToggleGroup fx:id="TogglesLinked" />
+                  </toggleGroup>
+               </RadioButton>
+               <RadioButton fx:id="weekAppRadio" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnWeekRadio" style="-fx-font-weight: bold;" text="Weekly" toggleGroup="$TogglesLinked">
                   <padding>
                      <Insets right="10.0" top="3.0" />
                   </padding>
                </RadioButton>
-               <RadioButton fx:id="weekAppRadio" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnWeekRadio" style="-fx-font-weight: bold;" text="Weekly">
-                  <padding>
-                     <Insets right="10.0" top="3.0" />
-                  </padding>
-               </RadioButton>
-               <RadioButton fx:id="monthAppRadio" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnMonthRadio" style="-fx-font-weight: bold;" text="Monthly">
+               <RadioButton fx:id="monthAppRadio" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnMonthRadio" style="-fx-font-weight: bold;" text="Monthly" toggleGroup="$TogglesLinked">
                   <padding>
                      <Insets right="10.0" top="3.0" />
                   </padding>
@@ -109,16 +112,16 @@
          </HBox>
       </children>
    </AnchorPane>
-   <AnchorPane layoutX="957.0" layoutY="62.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="173.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 5; -fx-background-color: #e0ebeb; -fx-background-insets: 1;">
+   <AnchorPane layoutX="957.0" layoutY="62.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="173.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 5; -fx-background-color: #a7bcb9; -fx-background-insets: 1;">
       <children>
          <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="120.0" text="Reports">
             <font>
                <Font name="System Bold" size="14.0" />
             </font>
          </Label>
-         <Button fx:id="AddCustomerButton11" layoutX="14.0" layoutY="103.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Contact Schedules" />
+         <Button fx:id="contactSchedBtn" layoutX="14.0" layoutY="103.0" mnemonicParsing="false" onAction="#OnContactSched" prefHeight="25.0" prefWidth="146.0" text="Contact Schedules" />
          <Button fx:id="CustomerInfoButton11" layoutX="14.0" layoutY="48.0" mnemonicParsing="false" onAction="#OnCustApp" text="Customer Appointments" />
-         <Button fx:id="AddCustomerButton111" layoutX="14.0" layoutY="156.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Other" />
+         <Button fx:id="report3" layoutX="14.0" layoutY="156.0" mnemonicParsing="false" onAction="#OnSelect" prefHeight="25.0" prefWidth="146.0" text="Other" />
       </children>
    </AnchorPane>
 </AnchorPane>
