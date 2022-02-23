@@ -49,7 +49,7 @@
                 </columns>
             </TableView>
               <Button fx:id="addCustomer" layoutX="749.0" layoutY="148.0" mnemonicParsing="false" onAction="#OnAddCustomer" prefHeight="25.0" prefWidth="120.0" text="Add New Customer" />
-              <Button fx:id="CustomerInfoButton" layoutX="719.0" layoutY="67.0" mnemonicParsing="false" onAction="#OnSelectedCustBtn" text="Selected Customer Information" />
+              <Button fx:id="customerInfoBtn" layoutX="719.0" layoutY="67.0" mnemonicParsing="false" onAction="#OnSelCustomerBtn" text="Selected Customer Information" />
          <Line endX="-49.0" layoutX="947.0" layoutY="124.0" startX="-227.0" />
         </children>
     </AnchorPane>
@@ -84,17 +84,17 @@
          <Line endX="164.0" layoutX="566.0" layoutY="281.0" startX="-196.0" />
          <HBox alignment="TOP_CENTER" layoutX="151.0" layoutY="15.0" prefHeight="25.0" prefWidth="206.0" style="-fx-background-color: #5dacbd; -fx-border-radius: 5;">
             <children>
-               <RadioButton mnemonicParsing="false" style="-fx-font-weight: bold;" text="All">
+               <RadioButton fx:id="allAppRadio" mnemonicParsing="false" onAction="#OnAllRadio" style="-fx-font-weight: bold;" text="All">
                   <padding>
                      <Insets right="10.0" top="3.0" />
                   </padding>
                </RadioButton>
-               <RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" style="-fx-font-weight: bold;" text="Weekly">
+               <RadioButton fx:id="weekAppRadio" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnWeekRadio" style="-fx-font-weight: bold;" text="Weekly">
                   <padding>
                      <Insets right="10.0" top="3.0" />
                   </padding>
                </RadioButton>
-               <RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" style="-fx-font-weight: bold;" text="Monthly">
+               <RadioButton fx:id="monthAppRadio" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnMonthRadio" style="-fx-font-weight: bold;" text="Monthly">
                   <padding>
                      <Insets right="10.0" top="3.0" />
                   </padding>
