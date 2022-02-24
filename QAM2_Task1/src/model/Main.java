@@ -17,6 +17,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static DAO.JDBC.openConnection;
+
 /**
  * <h1>C195 - Software II</h1>
  * Main creates an app for the management of customers and appointments.
@@ -52,6 +54,8 @@ public class Main extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+
+        openConnection(); //open db connection?
         launch(args);
     }
 }

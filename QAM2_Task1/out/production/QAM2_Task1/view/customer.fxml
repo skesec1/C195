@@ -28,8 +28,8 @@
                     <TableColumn fx:id="DashUserId" prefWidth="96.0" text="User ID" />
                 </columns>
             </TableView>
-            <Button fx:id="addCustomerBtn" layoutX="470.0" layoutY="296.0" mnemonicParsing="false" onAction="#OnAddCustomer" prefHeight="25.0" prefWidth="161.0" text="Add New Appointment" />
-            <Button fx:id="customerInfoBtn" layoutX="370.0" layoutY="236.0" mnemonicParsing="false" onAction="#OnSelCustomerInfo" text="Update Selected Appointment" />
+            <Button fx:id="addAppBtn" layoutX="470.0" layoutY="296.0" mnemonicParsing="false" onAction="#OnAddApp" prefHeight="25.0" prefWidth="161.0" text="Add New Appointment" />
+            <Button fx:id="updateAppBtn" layoutX="370.0" layoutY="236.0" mnemonicParsing="false" onAction="#OnUpdateApp" text="Update Selected Appointment" />
             <Line endX="182.0" layoutX="566.0" layoutY="281.0" startX="-212.0" />
             <HBox alignment="TOP_CENTER" layoutX="208.0" layoutY="15.0" prefHeight="25.0" prefWidth="206.0" style="-fx-background-color: #a7bcb9; -fx-border-radius: 5;">
                 <children>
@@ -59,7 +59,7 @@
                     <Insets left="7.0" />
                 </padding>
             </HBox>
-         <Button layoutX="559.0" layoutY="236.0" mnemonicParsing="false" text="Delete Selected Appointment" />
+         <Button fx:id="delAppBtn" layoutX="559.0" layoutY="236.0" mnemonicParsing="false" onAction="#OnDelApp" text="Delete Selected Appointment" />
         </children>
     </AnchorPane>
    <AnchorPane layoutX="29.0" layoutY="24.0" prefHeight="302.0" prefWidth="583.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 5; -fx-background-color: #a7bcb9; -fx-background-insets: 1;">
@@ -78,7 +78,7 @@
          <Label layoutX="22.0" layoutY="226.0" text="Phone" />
          <Label layoutX="391.0" layoutY="63.0" text="Division" />
          <Button fx:id="saveCustomer" layoutX="286.0" layoutY="257.0" mnemonicParsing="false" onAction="#OnSaveCustomer" text="Save Customer Changes" />
-         <TextField layoutX="95.0" layoutY="59.0" prefHeight="25.0" prefWidth="95.0" />
+         <TextField disable="true" layoutX="95.0" layoutY="59.0" prefHeight="25.0" prefWidth="95.0" promptText="Auto-gen" />
          <ComboBox layoutX="256.0" layoutY="59.0" prefHeight="25.0" prefWidth="119.0" />
          <ComboBox layoutX="441.0" layoutY="59.0" prefHeight="25.0" prefWidth="119.0" />
          <TextField layoutX="68.0" layoutY="98.0" prefHeight="25.0" prefWidth="218.0" />
